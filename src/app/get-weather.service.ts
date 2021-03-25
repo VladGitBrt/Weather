@@ -35,6 +35,7 @@ export class GetWeatherService {
             windSpeed: this.windSpeed + ' km/h',
             wDescription: this.weatherDescription
           };
+
           console.log(this.foundCountry);
           return this.foundCountry;
         }
