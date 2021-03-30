@@ -1,8 +1,9 @@
-Country name: <input type="text" #enteredName>
-<button (click)="sendRequest(enteredName.value)" type="submit">Search</button>
-<hr>
-<div class="container">
-  <div class="item">
-    <p>{{countries }}</p>
-  </div>
+
+<app-get-weather (foundCountry)="addFoundedCountry($event)"></app-get-weather>
+<div class="container" *ngFor="let item of countries">
+  <span>Name: {{item.name}}</span>
+  <span>Temperature: {{item.temperature}}</span>
+  <span>Air pressure: {{item.pressure}}</span>
+  <span>Wind speed: {{item.windSpeed}}</span>
+  <span>Weather description: {{item.wDescription}}</span>
 </div>

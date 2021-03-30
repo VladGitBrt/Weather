@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import {GetWeatherService} from './get-weather.service';
 
 
 
@@ -11,10 +10,10 @@ import {GetWeatherService} from './get-weather.service';
 export class AppComponent{
   countries = [];
   response;
-  constructor(private svc: GetWeatherService) {}
+  constructor() {}
   title = 'Weather';
- sendRequest(countryName): void{
-   this.countries = this.svc.sendRequest(countryName);
-  }
+  addFoundedCountry(obj): void{
+    this.countries.push(obj);
 
+  }
 }
